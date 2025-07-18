@@ -24,7 +24,7 @@ As part of the React Intern selection process, we were asked to replicate 4 key 
 |---------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
 | Home                | [better.com](https://better.com)                                              | [Home Page](https://better-clone-theta.vercel.app/)                           |
 | About Us            | [better.com/about-us](https://better.com/about-us/)                          | [About Us](https://better-clone-theta.vercel.app/about-us)                    |
-| Mortgage Calculator | [better.com/mortgage-calculator?taxes=265&zip=421005](https://better.com/mortgage-calculator?taxes=265&zip=421005) | [Mortgage Calculator](https://better-clone-theta.vercel.app/mortgage-calculator) |
+| Mortgage Calculator | [better.com/mortgage-calculator?taxes=265&zip=421005](https://better.com/mortgage-calculator?taxes=265&zip=421005) | [Mortgage Calculator](https://better-clone-theta.vercel.app/mortagecalculator) |
 | Start Page          | [better.com/start](https://better.com/start)                                  | [Start Page](https://better-clone-theta.vercel.app/start)                     |
 
 ---
