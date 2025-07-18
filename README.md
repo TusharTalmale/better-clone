@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏠 Better.com Clone – React + Next.js (Internship Assignment)
 
-## Getting Started
+This project is a **multi-page web application** built using **React with Next.js**, replicating the design and functionality of key pages from [Better.com](https://better.com). It was completed as part of the assignment for the **React Intern Role** at **The Medius**.
 
-First, run the development server:
+---
+
+## 🔗 Live Demo Result
+
+🌐 [View Live Site on Vercel](https://better-clone-theta.vercel.app/)
+[Home](https://better-clone-theta.vercel.app/)
+[About-us](https://better-clone-theta.vercel.app/about-us)
+[Mortgage Calculator](https://better-clone-theta.vercel.app/mortagecalculator)
+[Start Page](https://better-clone-theta.vercel.app/start)
+---
+
+## 📁 Project Structure
+
+Built using **Next.js App Router**, **Tailwind CSS**, and follows clean component-based architecture.
+
+
+---
+
+## 🚀 Features
+
+✅ Fully responsive  
+✅ Modern UI with Tailwind CSS  
+✅ Accurate Mortgage Calculator logic  
+✅ Smooth routing with App Router  
+✅ Clean and maintainable code  
+✅ Deployed on Vercel  
+
+---
+
+## 🧮 Pages Replicated
+
+| Page             | Original URL                                            |
+|------------------|---------------------------------------------------------|
+| Home             | https://better.com                                      |
+| About Us         | https://better.com/about-us/                            |
+| Mortgage Calculator | https://better.com/mortgage-calculator?taxes=265&zip=421005 |
+| Start Page       | https://better.com/start                                |
+
+---
+
+## 🧠 Tech Stack
+
+- **React 18**
+- **Next.js 14 App Router**
+- **Tailwind CSS**
+- **TypeScript**
+- **Vercel Deployment**
+
+---
+
+## 📦 Installation & Running Locally
 
 ```bash
+# Clone the repo
+git clone https://github.com/tushartalmale/better-clone.git
+cd better-clone
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Build for production
+npm run build
+npm start
