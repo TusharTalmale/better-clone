@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { ArrowRight } from "../app/icons/custome_icons";
 
 export const Sticky = () => {
@@ -31,10 +32,12 @@ export const Sticky = () => {
         <div className="fixed bottom-6 right-6 z-50 hidden md:block">
           <div className="relative flex items-center max-w-sm shadow-lg bg-white rounded-xl overflow-hidden hover:shadow-xl transition">
             <div className="relative w-20 h-20 shrink-0">
-              <img
-                src="./Simple, Online, AI-Powered Mortgage _ Better Mortgage_files/floating-image.webp"
+              <Image
+                src="/Simple, Online, AI-Powered Mortgage _ Better Mortgage_files/floating-image.webp"
                 alt="Better Forever"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="80px"
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-white font-bold text-xs text-center px-1">
                 Better Forever
@@ -66,10 +69,12 @@ export const Sticky = () => {
           <div className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-2" />
           <div className="relative flex items-center">
             <div className="relative w-20 h-20 shrink-0 mr-3">
-              <img
-                src="./Simple, Online, AI-Powered Mortgage _ Better Mortgage_files/floating-image.webp"
+              <Image
+                src="/Simple, Online, AI-Powered Mortgage _ Better Mortgage_files/floating-image.webp"
                 alt="Better Forever"
-                className="w-full h-full object-cover rounded-xl"
+                fill
+                className="object-cover rounded-xl"
+                sizes="80px"
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-white font-bold text-xs text-center px-1">
                 Better Forever
@@ -104,7 +109,7 @@ export const Sticky = () => {
                 Want to continue with your pre-approval?
               </h5>
               <p className="text-sm text-gray-600 mt-1">
-                You’ll be able to pick up right where you left off.
+                You&#39;ll be able to pick up right where you left off.
               </p>
             </div>
             <div className="flex gap-3">

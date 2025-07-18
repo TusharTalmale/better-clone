@@ -1,9 +1,9 @@
 "use client"
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
-import React, { useState, useEffect, useCallback } from 'react';
+import React from 'react';
 import { MortageCalculator } from './component/mortage';
-
+import Image from 'next/image';
 
 const Mortage: React.FC = () => {
 
@@ -31,9 +31,9 @@ const Mortage: React.FC = () => {
             <div className="flex flex-col items-center">
               <div>
                 <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base my-sm">Formula for calculating your debt-to-income (DTI) ratio:</p>
-                <img alt="Mortgage calculator | Debt to income ratio (DTI) formula" loading="lazy" width="780" height="153" decoding="async" style={{ color: 'transparent' }} src="https://media.better.com/better-com/mortgage-calculator/dti-formula.jpg" />
+                <Image alt="Mortgage calculator | Debt to income ratio (DTI) formula" loading="lazy" width="780" height="153" decoding="async" style={{ color: 'transparent' }} src="https://media.better.com/better-com/mortgage-calculator/dti-formula.jpg" />
                 <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base my-sm">Here’s an example of what calculating your DTI might look like:</p>
-                <img alt="Mortgage calculator | Debt to income ratio (DTI) formula example" loading="lazy" width="780" height="525" decoding="async" style={{ color: 'transparent' }} src="https://media.better.com/better-com/mortgage-calculator/dti-example.jpg" />
+                <Image alt="Mortgage calculator | Debt to income ratio (DTI) formula example" loading="lazy" width="780" height="525" decoding="async" style={{ color: 'transparent' }} src="https://media.better.com/better-com/mortgage-calculator/dti-example.jpg" />
               </div>
             </div>
             <hr className="my-12 border-t border-strokeDivider" />
@@ -43,7 +43,7 @@ const Mortage: React.FC = () => {
             <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">The easiest way to calculate your mortgage payment is to use a calculator, but for the curious or mathematically inclined, here’s the formula for calculating principal and interest yourself:</p>
             <div className="flex flex-col items-center">
               <div>
-                <img alt="Mortgage calculator | Monthly mortgage payment formula" loading="lazy" width="780" height="126" decoding="async" style={{ color: 'transparent' }} src="https://media.better.com/better-com/mortgage-calculator/monthly-mortgage-payments-formula.jpg" />
+                <Image alt="Mortgage calculator | Monthly mortgage payment formula" loading="lazy" width="780" height="126" decoding="async" style={{ color: 'transparent' }} src="https://media.better.com/better-com/mortgage-calculator/monthly-mortgage-payments-formula.jpg" />
                 <div>
                   <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base my-sm">Where:</p>
                   <ul className="ml-xl list-disc">
@@ -53,7 +53,7 @@ const Mortage: React.FC = () => {
                     <li><p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base my-sm"><b>n</b> is the total number of payments in months<br /><small>For example:<br />for a 30-year loan, n = 30×12 = <b>360</b> months</small></p></li>
                   </ul>
                   <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base my-sm">Here’s a simple example:</p>
-                  <img alt="Mortgage calculator | Monthly mortgage payment formula example" loading="lazy" width="780" height="221" decoding="async" style={{ color: 'transparent' }} src="https://media.better.com/better-com/mortgage-calculator/monthly-mortgage-payments-example.jpg" />
+                  <Image alt="Mortgage calculator | Monthly mortgage payment formula example" loading="lazy" width="780" height="221" decoding="async" style={{ color: 'transparent' }} src="https://media.better.com/better-com/mortgage-calculator/monthly-mortgage-payments-example.jpg" />
                 </div>
               </div>
             </div>
@@ -63,15 +63,15 @@ const Mortage: React.FC = () => {
             <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Play around with different home prices, locations,{' '}
               <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">down payments</a>, interest rates, and mortgage lengths to see how they impact your monthly mortgage payments.
             </p>
-            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Increasing your down payment and decreasing your interest rate and mortgage term length will make your monthly payment go down. Taxes, insurance, and HOA fees will vary by location. If you enter a down payment amount that’s less than 20% of the home price,{' '}
-              <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">private mortgage insurance (PMI)</a>{' '}costs will be added to your monthly mortgage payment. As the costs of utilities can vary from county to county, we’ve included a utilities estimate that you can break down by service. If you’re thinking about buying a condo or into a community with a Homeowners Association (HOA), you can add HOA fees.</p>
-            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">The only amounts we haven’t included are the money you’ll need to save for annual home maintenance/repairs or the costs of home improvements. To see how much home you can afford including these costs, take a look at the{' '}
+            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Increasing your down payment and decreasing your interest rate and mortgage term length will make your monthly payment go down. Taxes, insurance, and HOA fees will vary by location. If you enter a down payment amount that&apos;s less than 20% of the home price,{' '}
+              <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">private mortgage insurance (PMI)</a>{' '}costs will be added to your monthly mortgage payment. As the costs of utilities can vary from county to county, we&apos;ve included a utilities estimate that you can break down by service. If you’re thinking about buying a condo or into a community with a Homeowners Association (HOA), you can add HOA fees.</p>
+            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">The only amounts we haven&apos;t included are the money you&apos;ll need to save for annual home maintenance/repairs or the costs of home improvements. To see how much home you can afford including these costs, take a look at the{' '}
               <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">Better home affordability calculator</a>.</p>
             <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Fun fact:{' '}
               <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">Property tax rates</a>{' '}are extremely localized, so two homes of roughly the same size and quality on either side of a municipal border could have very different tax rates. Buying in an area with a lower property tax rate may make it easier for you to afford a higher-priced home.</p>
             <h3 className="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-lg md:text-xl">Do you know your property tax rate?</h3>
-            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">While exact property tax rates vary by county, it can be helpful to look at taxes on the state level to get an idea for taxes in your state. Here’s a helpful chart from{' '}
-              <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">Forbes</a>{' '}breaking down the Census Bureau’s 2021 American Community Survey 5-year estimate:</p>
+            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">While exact property tax rates vary by county, it can be helpful to look at taxes on the state level to get an idea for taxes in your state. Here&apos;s a helpful chart from{' '}
+              <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">Forbes</a>{' '}breaking down the Census Bureau&apos;s 2021 American Community Survey 5-year estimate:</p>
             <div className="my-3xl">
               <div className="relative pointer group w-full h-full overflow-scroll" tabIndex={0}>
                 <table className="min-w-full border border-successAccent table-auto clip-inset-round">
@@ -100,25 +100,25 @@ const Mortage: React.FC = () => {
             <h2 className="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-xl md:text-2xl md:tracking-tight">How is Better’s mortgage calculator different?</h2>
             <h3 className="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-lg md:text-xl">This mortgage calculator shows your payments with taxes and insurance</h3>
             <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">The property taxes you contribute are used to finance the services provided by your local government to the community. These services encompass schools, libraries, roads, parks, water treatment, police, and fire departments. Even after your mortgage has been fully paid, you will still need to pay property taxes. If you neglect your property taxes, you run the risk of losing your home to your local tax authority.</p>
-            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Your lender will usually require you to have homeowners insurance while you're settling your mortgage. This is a common practice among lenders because they understand that nobody wants to continue paying a mortgage on a home that's been damaged or destroyed.</p>
-            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Here's an interesting fact: Once you fully own your home, the choice to maintain homeowners insurance is entirely up to you. However, to ensure your home is protected against damages caused by fires, lightning strikes, and natural disasters that are common in your area, it is highly recommended to keep it. Therefore, always factor in these costs when using a Mortgage Calculator.</p>
+            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Your lender will usually require you to have homeowners insurance while you&apos;re settling your mortgage. This is a common practice among lenders because they understand that nobody wants to continue paying a mortgage on a home that&apos;s been damaged or destroyed.</p>
+            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Here&apos;s an interesting fact: Once you fully own your home, the choice to maintain homeowners insurance is entirely up to you. However, to ensure your home is protected against damages caused by fires, lightning strikes, and natural disasters that are common in your area, it is highly recommended to keep it. Therefore, always factor in these costs when using a Mortgage Calculator.</p>
             <h3 className="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-lg md:text-xl">This mortgage calculator shows your mortgage costs with PMI</h3>
             <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">PMI, an abbreviation for private mortgage insurance, aids potential homeowners in qualifying for a mortgage without the necessity of a 20% down payment. By opting for a lower down payment and choosing a mortgage with PMI, you can purchase a home sooner, begin accruing equity, and keep cash available for future needs. This can all be calculated using this Mortgage Calculator.</p>
             <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Choosing a mortgage with PMI is a popular option:{' '}
               <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">71% of first-time homebuyers</a>{' '}had a down payment of less than 20% in July 2021.{' '}
-              <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">In 2020, the median down payment for first-time homebuyers was just 7%, and it hasn’t risen above 10% since 1989.</a></p>
-            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">PMI is automatically removed from conventional mortgages once your home equity reaches 22%. Alternatively, you can request the removal of PMI once you've accumulated at least 20% home equity.</p>
+              <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">In 2020, the median down payment for first-time homebuyers was just 7%, and it hasn&apos;t risen above 10% since 1989.</a></p>
+            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">PMI is automatically removed from conventional mortgages once your home equity reaches 22%. Alternatively, you can request the removal of PMI once you&apos;ve accumulated at least 20% home equity.</p>
             <h3 className="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-lg md:text-xl">This mortgage calculator includes HOA fees</h3>
             <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Homeowners association (“HOA”) fees are typically charged directly by a homeowners association, but as HOA fees come part and parcel with condos, townhomes, and planned housing developments, they’re an essential factor to consider when calculating your mortgage costs.</p>
-            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Homes that share structural elements, such as roofs and walls, or community amenities like landscaping, pools, or BBQ areas, often require homeowners to pay HOA fees for the maintenance of these shared features. It's important to factor in these costs during your budget planning stage, especially considering that HOA fees typically increase annually. HOAs may also charge additional fees known as ‘special assessments’ to cover unexpected expenses from time to time.</p>
+            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Homes that share structural elements, such as roofs and walls, or community amenities like landscaping, pools, or BBQ areas, often require homeowners to pay HOA fees for the maintenance of these shared features. It&apos;s important to factor in these costs during your budget planning stage, especially considering that HOA fees typically increase annually. HOAs may also charge additional fees known as ‘special assessments’ to cover unexpected expenses from time to time.</p>
             <hr className="my-12 border-t border-strokeDivider" />
             <h2 className="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-xl md:text-2xl md:tracking-tight">How to reduce your monthly mortgage payments?</h2>
             <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">The lower the purchase price of the home, the lower your loan amount will be. But if the seller is less than willing to cut you a deal, you have other options.</p>
             <h3 className="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-lg md:text-xl">Extend the length of your mortgage</h3>
-            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">The more time you have to pay off the mortgage, the less each monthly mortgage payment will be. (In lender-speak, ‘extending the length of your mortgage’ is known as ‘increasing your loan term’.) This is why people often choose a 30-year fixed rate mortgage over one with a 15- or 20-year term.</p>
+            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">The more time you have to pay off the mortgage, the less each monthly mortgage payment will be. (In lender-speak, ‘extending the length of your mortgage&apos; is known as &apos;increasing your loan term&apos;.) This is why people often choose a 30-year fixed rate mortgage over one with a 15- or 20-year term.</p>
             <h3 className="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-lg md:text-xl">Increase your down payment</h3>
-            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">The smaller the amount of your mortgage, the smaller your monthly mortgage payments will be. If you’re able to put at least 20% of the home price towards your{' '}
-              <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">down payment</a>, you’ll be able to avoid PMI (private mortgage insurance). Even if you can’t afford a complete 20% down payment, boosting your down payment will help you get PMI removed sooner. In fact, boosting your down payment by 5% can lower your monthly PMI fees.</p>
+            <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">The smaller the amount of your mortgage, the smaller your monthly mortgage payments will be. If you&apos;re able to put at least 20% of the home price towards your{' '}
+              <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">down payment</a>, you&apos;ll be able to avoid PMI (private mortgage insurance). Even if you can&apos;t afford a complete 20% down payment, boosting your down payment will help you get PMI removed sooner. In fact, boosting your down payment by 5% can lower your monthly PMI fees.</p>
             <h3 className="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-lg md:text-xl">Get a lower interest rate</h3>
             <p className="font-normal leading-body m-0 p-0 text-left text-textPrimary text-base">Increasing your down payment can be one way to help you qualify for a lower interest rate. The amount of your down payment compared to the total amount of the loan is called your{' '}
               <a className="font-normal underline focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary" href="#">loan-to-value ratio (LTV)</a>.</p>
@@ -145,18 +145,18 @@ const Mortage: React.FC = () => {
                 <h2 className="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-xl md:text-2xl md:tracking-tight">More resources</h2>
                 <div className="flex flex-col justify-between gap-2xl pt-[36px] md:flex-row">
                   <div className="rounded-base px-xl py-lg border border-strokeDivider flex-1">
-                    <img alt="Get pre-approved to see how much you can borrow" loading="lazy" width="32" height="32" decoding="async" style={{ color: 'transparent' }} src="https://placehold.co/32x32/E0E0E0/333333?text=Doc" />
+                    <Image alt="Get pre-approved to see how much you can borrow" loading="lazy" width="32" height="32" decoding="async" style={{ color: 'transparent' }} src="https://placehold.co/32x32/E0E0E0/333333?text=Doc" />
                     <p className="font-normal leading-body m-0 p-0 text-left mt-base text-[20px] text-interactiveForegroundSecondary"><span>Get pre-approved to see how much you can borrow</span></p>
                     <a className="focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary block mb-xs mt-base font-bold no-underline hover:underline" href="#">Get started →</a>
                     <p className="font-normal leading-body m-0 p-0 text-left text-xs text-textSecondary">Won’t impact your credit</p>
                   </div>
                   <div className="rounded-base px-xl py-lg border border-strokeDivider flex-1">
-                    <img alt="See today’s rates in your area" loading="lazy" width="32" height="32" decoding="async" style={{ color: 'transparent' }} src="https://placehold.co/32x32/E0E0E0/333333?text=Rates" />
+                    <Image alt="See today’s rates in your area" loading="lazy" width="32" height="32" decoding="async" style={{ color: 'transparent' }} src="https://placehold.co/32x32/E0E0E0/333333?text=Rates" />
                     <p className="font-normal leading-body m-0 p-0 text-left mt-base text-[20px] text-interactiveForegroundSecondary"><span>See today’s rates in your area</span></p>
                     <a className="focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary block mb-xs mt-base font-bold no-underline hover:underline" href="#">See rates →</a>
                   </div>
                   <div className="rounded-base px-xl py-lg border border-strokeDivider flex-1">
-                    <img alt="Find out your max homebuying budget" loading="lazy" width="32" height="32" decoding="async" style={{ color: 'transparent' }} src="https://placehold.co/32x32/E0E0E0/333333?text=Calc" />
+                    <Image alt="Find out your max homebuying budget" loading="lazy" width="32" height="32" decoding="async" style={{ color: 'transparent' }} src="https://placehold.co/32x32/E0E0E0/333333?text=Calc" />
                     <p className="font-normal leading-body m-0 p-0 text-left mt-base text-[20px] text-interactiveForegroundSecondary"><span>Find out your max homebuying budget</span></p>
                     <a className="focus:outline-interactivePrimary focus:outline-1 focus:outline-offset-[theme(spacing.2xs)] text-interactivePrimary block mb-xs mt-base font-bold no-underline hover:underline" href="#">Try our mortgage calculator →</a>
                   </div>

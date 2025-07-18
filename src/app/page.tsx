@@ -5,6 +5,7 @@ import HomeSection3 from './_components/GotanyQuestion';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import {Sticky} from '@/components/sticky';
+import Image from 'next/image';
 
 
 
@@ -79,8 +80,13 @@ export default function App() {
     </div>
     <div className="relative flex flex-col items-center justify-center md:flex-row">
       <div className="mt-10 px-4 md:mt-12">
-        <img alt="Better Mortgage" rel="preload" width="510" height="810" decoding="async" data-nimg="1" style={{ color: 'transparent' }} src="https://media.better.com/better-com/homepage/ai-powered-fico.webp" />
-      </div>
+<Image
+  alt="Better Mortgage"
+  src="https://media.better.com/better-com/homepage/ai-powered-fico.webp"
+  width={510}
+  height={810}
+  style={{ color: 'transparent' }}
+/>      </div>
     </div>
   </div>
 </section>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 
 const Hero = () => {
@@ -23,8 +24,14 @@ const Hero = () => {
             </div>
             <div className="relative flex flex-col items-center justify-center md:flex-row">
               <div className="mt-10 px-4 md:mt-12">
-                {/* Note: For Next.js, consider using `next/image` for optimized images. */}
-                <img alt="Better Mortgage" rel="preload"  width="510" height="810" decoding="async" data-nimg="1" style={{ color: 'transparent' }} src="./Simple, Online, AI-Powered Mortgage _ Better Mortgage_files/ai-powered-fico.webp" />
+<Image
+  alt="Better Mortgage"
+  src="/Simple, Online, AI-Powered Mortgage _ Better Mortgage_files/ai-powered-fico.webp"
+  width={510}
+  height={810}
+  priority
+  style={{ color: "transparent" }}
+/>
               </div>
             </div>
           </div>

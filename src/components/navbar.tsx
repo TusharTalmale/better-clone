@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { ArrowRight, BetterLogo2021, ChevronDown, MenuIcon, PhoneIcon, UserIcon, XIcon } from '../app/icons/custome_icons'; // Assuming these paths are correct
+import Link from "next/link";
 
 interface NavbarProps {
   isOverHero?: boolean;
@@ -50,13 +51,13 @@ const DropdownContent: React.FC<{ items: { label: string; href: string; agentTag
   <div className="z-10 w-[22rem] rounded-base p-3 bg-white shadow-md">
     {items.map((item, index) => (
       <div key={index}>
-        <a href={item.href} className="px-5 py-3 hover:bg-backgroundSecondary group/sub-menu hover:rounded-base focus:bg-accentBackground flex justify-between ">
+        <Link href={item.href} className="px-5 py-3 hover:bg-backgroundSecondary group/sub-menu hover:rounded-base focus:bg-accentBackground flex justify-between ">
           {item.label}
           {item.agentTag && (
             <span className="leading-body m-0 p-0 text-left text-sm ml-2 inline-block rounded-full bg-graph4Tertiary px-4 font-bold text-backgroundInversePrimary">For Agents</span>
           )}
           <ArrowRight className="text-transparent group-hover/sub-menu:text-accentPrimary" />
-        </a>
+        </Link>
       </div>
     ))}
   </div>
@@ -111,9 +112,9 @@ const Navbar: React.FC<NavbarProps> = ({ isOverHero = false, enableHero = false 
             className={`fixed bg-white h-full text-black inset-0 z-10 flex flex-col p-2 shadow-md transition-transform duration-300 ease-[cubic-bezier(0.42,0,0.58,1)] overflow-auto overscroll-contain ${isMobileNavOpen ? 'translate-x-0' : '-translate-x-full invisible'}`}
           >
             <div className="flex justify-between items-center">
-              <a className="inline-block px-2 flex-none" href="/">
+              <Link className="inline-block px-2 flex-none" href="/">
                 <BetterLogo2021 />
-              </a>
+              </Link>
               <button
                 className="inline-block rounded-base leading-body text-base text-center font-bold select-none outline-none transition duration-300 ease-universal focus:shadow-[0_0_0_4px_inset] disabled:text-interactiveForegroundMuted disabled:bg-interactiveMuted disabled:shadow-none text-interactiveForegroundTertiary bg-transparent hover:bg-interactiveSecondary focus:bg-interactiveSecondary focus:border-transparent focus:shadow-accentBorderSecondary active:bg-interactiveSecondary px-base h-2xl w-auto"
                 onClick={toggleMobileNav}
@@ -134,10 +135,10 @@ const Navbar: React.FC<NavbarProps> = ({ isOverHero = false, enableHero = false 
                 <ul className="m-0 list-none">
                   {items.map((item, index) => (
                     <li key={index}>
-                      <a className="flex items-center whitespace-nowrap px-7 py-4 hover:rounded-base hover:bg-accentBackground focus:bg-accentBackground" href={item.href}>
+                      <Link className="flex items-center whitespace-nowrap px-7 py-4 hover:rounded-base hover:bg-accentBackground focus:bg-accentBackground" href={item.href}>
                         {item.label}
                        
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -148,11 +149,11 @@ const Navbar: React.FC<NavbarProps> = ({ isOverHero = false, enableHero = false 
               <div className="mr-3">
                 <PhoneIcon />
               </div>
-              Call us anytime at<a className="ml-1 underline underline-offset-[3px] hover:text-textHighlight" href="tel:4155238837">(415) 523 88371</a>
+              Call us anytime at<Link className="ml-1 underline underline-offset-[3px] hover:text-textHighlight" href="tel:4155238837">(415) 523 88371</Link>
             </div>
             <div className="flex flex-row gap-4 mx-auto mt-auto">
-              <a className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-bold leading-normal disabled:pointer-events-none disabled:opacity-50 transition-all ease-in-out duration-200 hover:bg-accentPrimary h-16 w-40 bg-green-300 text-black-600 " href="https://better.com/preapproval/b782bb09-edbe-41ef-8950-efdb455736cd">Continue</a>
-              <a className="inline-flex items-center justify-center rounded-full text-base leading-normal disabled:pointer-events-none disabled:opacity-50 transition-all ease-in-out duration-200 border border-strokeDivider text-interactiveForegroundInversePrimary hover:shadow-accentBorderSecondary hover:border-accentBorderSecondary hover:shadow-[0_0_0_4px_inset] hover:text-green-800 h-16 w-40 font-normal" href="https://better.com/account/sign-in">Sign in<span className="ml-xs"><UserIcon /></span></a>
+              <Link className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-bold leading-normal disabled:pointer-events-none disabled:opacity-50 transition-all ease-in-out duration-200 hover:bg-accentPrimary h-16 w-40 bg-green-300 text-black-600 " href="https://better.com/preapproval/b782bb09-edbe-41ef-8950-efdb455736cd">Continue</Link>
+              <Link className="inline-flex items-center justify-center rounded-full text-base leading-normal disabled:pointer-events-none disabled:opacity-50 transition-all ease-in-out duration-200 border border-strokeDivider text-interactiveForegroundInversePrimary hover:shadow-accentBorderSecondary hover:border-accentBorderSecondary hover:shadow-[0_0_0_4px_inset] hover:text-green-800 h-16 w-40 font-normal" href="https://better.com/account/sign-in">Sign in<span className="ml-xs"><UserIcon /></span></Link>
             </div>
           </div>
           {/* Overlay for mobile nav */}
@@ -165,9 +166,9 @@ const Navbar: React.FC<NavbarProps> = ({ isOverHero = false, enableHero = false 
           {/* Desktop Navigation */}
           <ul className="flex items-center">
             <li className="mr-2">
-              <a className="font-normal transition-all ease-in-out duration-300 text-textPrimary hover:bg-backgroundSecondary group-hover:bg-backgroundSecondary" href="/">
+              <Link className="font-normal transition-all ease-in-out duration-300 text-textPrimary hover:bg-backgroundSecondary group-hover:bg-backgroundSecondary" href="/">
                 <BetterLogo2021 width="65px" height="20px" />
-              </a>
+              </Link>
             </li>
             {Object.entries(navLinks).map(([key, items]) => (
               <li className={`mx-5 ${key !== 'refinance' ? 'hidden xl:block' : ''}`} key={key}>
@@ -191,15 +192,15 @@ const Navbar: React.FC<NavbarProps> = ({ isOverHero = false, enableHero = false 
                   <PhoneIcon className="transition-all ease-in-out group-hover:[&_path]:fill-interactiveForegroundInversePrimary h-3 w-3 md:h-4 md:w-4" />
                 </div>
                 <div className="absolute invisible left-1 min-[520px]:left-auto right-0 pt-2 group-hover:visible">
-                  <div className="bg-backgroundTertiary px-10 py-7 rounded-base w-80 shadow-md">Call us anytime at <a className="underline hover:text-textHighlight" href="tel:4155238837">415-523-8837</a></div>
+                  <div className="bg-backgroundTertiary px-10 py-7 rounded-base w-80 shadow-md">Call us anytime at <Link className="underline hover:text-textHighlight" href="tel:4155238837">415-523-8837</Link></div>
                 </div>
               </div>
             </li>
             <li className="hidden md:block">
-              <a className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base leading-normal disabled:pointer-events-none disabled:opacity-50 bg-transparent py-5 w-auto font-normal transition-all ease-in-out duration-300 h-12 px-4 text-textPrimary hover:bg-backgroundSecondary group-hover:bg-backgroundSecondary" href="https://better.com/account/sign-in">Sign in</a>
+              <Link className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base leading-normal disabled:pointer-events-none disabled:opacity-50 bg-transparent py-5 w-auto font-normal transition-all ease-in-out duration-300 h-12 px-4 text-textPrimary hover:bg-backgroundSecondary group-hover:bg-backgroundSecondary" href="https://better.com/account/sign-in">Sign in</Link>
             </li>
             <li className="transition-all duration-500 ease-in block">
-              <a className="inline-flex items-center justify-center whitespace-nowrap rounded-full font-bold leading-normal disabled:pointer-events-none bg-green-400 text-black disabled:opacity-50 transition-all ease-in-out duration-200 hover:bg-accentPrimary py-3 w-auto h-8 px-4 md:px-6 md:h-12" href="https://better.com/preapproval/b782bb09-edbe-41ef-8950-efdb455736cd">Continue</a>
+              <Link className="inline-flex items-center justify-center whitespace-nowrap rounded-full font-bold leading-normal disabled:pointer-events-none bg-green-400 text-black disabled:opacity-50 transition-all ease-in-out duration-200 hover:bg-accentPrimary py-3 w-auto h-8 px-4 md:px-6 md:h-12" href="https://better.com/preapproval/b782bb09-edbe-41ef-8950-efdb455736cd">Continue</Link>
             </li>
             <li>
               <button className="xl:hidden flex items-center font-normal transition-all ease-in-out duration-300 text-textPrimary hover:bg-backgroundSecondary group-hover:bg-backgroundSecondary" aria-label="open mobile nav bar" onClick={toggleMobileNav}>

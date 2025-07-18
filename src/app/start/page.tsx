@@ -1,5 +1,6 @@
 import React from 'react';
 import { BBBIcon, BetterLogo2021, CheckIcon, DashboardIcon, EqualHousingLenderIcon, HelocIcon, OffersIcon, PhoneIcon, PurchaseIcon, RatesIcon, RefinanceIcon } from '../icons/custome_icons';
+import Image from 'next/image';
 
 const App = () => {
   return (
@@ -41,7 +42,7 @@ const App = () => {
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full h-12 w-12 overflow-hidden border-none shadow-[0_0_15px_1px_#1EE07F]">
             <div className="flex items-center justify-center relative w-12 max-h-12">
               <div className="pb-12 relative w-12">
-                <img data-size="medium" src="https://media.better.com/components/preapproval/industry-parity-v2/betsy.svg" alt="Spokesperson" className="block h-full absolute w-full top-0 left-0 object-contain" />
+                <Image data-size="medium" src="https://media.better.com/components/preapproval/industry-parity-v2/betsy.svg" alt="Spokesperson" className="block h-full absolute w-full top-0 left-0 object-contain" />
               </div>
             </div>
           </div>
@@ -53,7 +54,7 @@ const App = () => {
         <div className="flex justify-center w-full">
           <div className="flex flex-col items-center text-center max-w-xl">
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight lg:tracking-tighter text-[#292b29]">
-              <span className="whitespace-normal md:whitespace-nowrap">Hi, I'm Betsy!</span><br />What can I help you with?
+              <span className="whitespace-normal md:whitespace-nowrap">Hi, I&apos;m Betsy!</span><br />What can I help you with?
             </h1>
             <div className="mb-6 w-full max-w-2xl">
               <div className="grid gap-4 md:gap-6">
@@ -95,7 +96,7 @@ const App = () => {
 
             {/* Unlock Section */}
             <div className="bg-[#f0f7f1] rounded-lg mb-10 p-5 text-center w-full">
-              <p className="text-[#565d5a] text-center mb-4 text-base">After a few questions, you'll unlock:</p>
+              <p className="text-[#565d5a] text-center mb-4 text-base">After a few questions, you&apos;ll unlock:</p>
               <div className="mx-auto w-fit">
                 <div className="flex flex-col space-y-3"> {/* Use flex-col and space-y for vertical stacking */}
                   <div className="flex flex-row">
