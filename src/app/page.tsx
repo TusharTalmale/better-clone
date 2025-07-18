@@ -1,103 +1,100 @@
-import Image from "next/image";
+"use client"
+import React, { useState, useEffect, useRef } from 'react';
+import WhyWereBetterSection from './_components/WhyWereBetterSection';
+import HomeSection3 from './_components/GotanyQuestion';
+import Footer from '@/components/footer';
+import Navbar from '@/components/navbar';
+import {Sticky} from '@/components/sticky';
+export default function App() {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [isOverHero, setIsOverHero] = useState(false);
+  const heroRef = useRef<HTMLDivElement>(null);
 
-export default function Home() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsOverHero(entry.isIntersecting);
+      },
+      { threshold: 0.1, rootMargin: '-50px 0px 0px 0px' }
+    );
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1280 && isMobileNavOpen) {
+        setIsMobileNavOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isMobileNavOpen]);
+
+
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="bg-white text-black">
+      <main>
+      <Navbar isOverHero = {isOverHero} enableHero = {true}></Navbar>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+
+      {/* Hero Section */}
+<section id="hero" ref={heroRef} className="relative section bg-green-900 overflow-hidden"> {/* Changed bg-accentPrimary to a darker green, adjust as needed */}
+  {/* This div creates the blurred background effect at the bottom */}
+  <div className="absolute bottom-0 left-1/2 w-full h-[250px] md:h-[230px] -translate-x-1/2 translate-y-1/3 rounded-[406px] md:rounded-[1100px] bg-green-600/30 blur-[220px] md:blur-[475px]"></div> {/* Adjusted bg-textInverseHighlight to a translucent green */}
+  <div className="relative z-10 m-auto max-w-screen-2xl overflow-hidden px-6 md:px-10 lg:px-14">
+    <h1 className="font-bold leading-heading m-0 p-0 w-auto tracking-tight md:tracking-tighter mt-[48px] z-1 leading-small text-center text-[50px] text-white md:mt-[80px] md:p-0 md:text-4xl lg:text-[100px]">
+      The first
+      <br />
+      <span className="bg-[linear-gradient(116deg,_#00FF80_16.51%,_#A987FF_54.85%,_#EA06FF_94.62%)] bg-clip-text text-transparent">AI-powered</span>{' '}
+      {/* */}Mortgage
+    </h1>
+    <p className="font-normal leading-body m-0 p-0 text-white text-[18px] md:text-[24px] text-center mt-[32px] md:mt-[18px]">
+      Our tech unlocks lower rates, higher chances of approval,
+      <br />
+      and a lightning‑fast process from approval&nbsp;to&nbsp;closing. Over $100 billion funded.
+    </p>
+    <div className="w-auto text-center mt-8 md:mt-10">
+      <a
+        className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-bold leading-normal disabled:pointer-events-none disabled:opacity-50 transition-all ease-in-out duration-200 bg-[#00FF80] text-gray-900 hover:bg-white hover:text-green-700 h-16 px-12 py-5 w-full sm:w-fit" // Adjusted button colors
+        href="https://better.com/start"
+      >
+        Start my pre-approval
+      </a>
+      <div className="mt-3 flex items-center justify-center gap-1 text-xs text-green-300"> {/* Adjusted text-accentSecondary to a lighter green for better contrast */}
+        <svg width="20" height="20" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.5 6H8.5V10.5H7.5V6ZM6.5 1.5H9.5V2.5H6.5V1.5Z" className="fill-current"></path> {/* Changed fill-accentSecondary to fill-current to inherit from parent text color */}
+          <path className="fill-current" d="M13.9987 5.00055L13.2887 4.29555L12.1637 5.42055C11.2429 4.35706 9.94762 3.68926 8.54717 3.5559C7.14671 3.42254 5.74872 3.83386 4.64365 4.70442C3.53857 5.57497 2.81139 6.83782 2.61318 8.23057C2.41497 9.62333 2.76098 11.0389 3.57931 12.1832C4.39765 13.3275 5.62539 14.1125 7.00745 14.3751C8.38950 14.6377 9.81961 14.3578 11.0006 13.5934C12.1817 12.8291 13.0228 11.6391 13.3493 10.2707C13.6758 8.90233 13.4625 7.46077 12.7537 6.24554L13.9987 5.00055ZM7.99875 13.5005C7.10873 13.5005 6.23870 13.2366 5.49868 12.7422C4.75866 12.2477 4.18189 11.5449 3.84129 10.7226C3.50070 9.90035 3.41158 8.99555 3.58522 8.12264C3.75885 7.24972 4.18743 6.44790 4.81677 5.81856C5.44611 5.18923 6.24793 4.76064 7.12084 4.58701C7.99376 4.41338 8.89856 4.50249 9.72082 4.84309C10.5431 5.18368 11.2459 5.76046 11.7404 6.50048C12.2348 7.24050 12.4987 8.11053 12.4987 9.00055C12.4987 10.1940 12.0246 11.3386 11.1807 12.1825C10.3368 13.0264 9.19222 13.5005 7.99875 13.5005Z"></path>
+        </svg>
+        <span className="mr-1">3 min</span><span>| No hard credit check </span>
+      </div>
+    </div>
+    <div className="relative flex flex-col items-center justify-center md:flex-row">
+      <div className="mt-10 px-4 md:mt-12">
+        <img alt="Better Mortgage" rel="preload" width="510" height="810" decoding="async" data-nimg="1" style={{ color: 'transparent' }} src="https://media.better.com/better-com/homepage/ai-powered-fico.webp" />
+      </div>
+    </div>
+  </div>
+</section>
+
+  <WhyWereBetterSection></WhyWereBetterSection>
+
+        {/* Got Questions Section */}
+< HomeSection3></HomeSection3>
+
+
+        <hr className="border-t border-strokeDivider my-0 pb-lg" />
+<Sticky></Sticky>
+
+        {/* Footer Section */}
+   < Footer/>
+        
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }

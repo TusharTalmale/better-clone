@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js", "src/app/_components/WhyWereBetterSection.jsx", "src/app/_components/GotanyQuestion.jsx", "src/app/about-us/page.jsx", "src/app/about-us/components/StatusQuote.jsx", "src/app/mortagecalculator"],
   "exclude": ["node_modules"]
 }
