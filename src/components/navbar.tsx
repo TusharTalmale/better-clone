@@ -111,7 +111,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOverHero = false, enableHero = false 
             className={`fixed bg-white h-full text-black inset-0 z-10 flex flex-col p-2 shadow-md transition-transform duration-300 ease-[cubic-bezier(0.42,0,0.58,1)] overflow-auto overscroll-contain ${isMobileNavOpen ? 'translate-x-0' : '-translate-x-full invisible'}`}
           >
             <div className="flex justify-between items-center">
-              <a className="inline-block px-2 flex-none" href="https://better.com/">
+              <a className="inline-block px-2 flex-none" href="/">
                 <BetterLogo2021 />
               </a>
               <button
@@ -165,7 +165,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOverHero = false, enableHero = false 
           {/* Desktop Navigation */}
           <ul className="flex items-center">
             <li className="mr-2">
-              <a className="font-normal transition-all ease-in-out duration-300 text-textPrimary hover:bg-backgroundSecondary group-hover:bg-backgroundSecondary" href="https://better.com/">
+              <a className="font-normal transition-all ease-in-out duration-300 text-textPrimary hover:bg-backgroundSecondary group-hover:bg-backgroundSecondary" href="/">
                 <BetterLogo2021 width="65px" height="20px" />
               </a>
             </li>

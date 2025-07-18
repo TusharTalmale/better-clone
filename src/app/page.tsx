@@ -5,6 +5,9 @@ import HomeSection3 from './_components/GotanyQuestion';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import {Sticky} from '@/components/sticky';
+
+
+
 export default function App() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [isOverHero, setIsOverHero] = useState(false);
